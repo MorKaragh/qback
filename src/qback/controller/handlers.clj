@@ -1,12 +1,17 @@
-(ns qback.controller.handlers)
+(ns qback.controller.handlers
+  (:require [clojure.pprint :as pprint]
+            [ring.middleware.params :refer [wrap-params]]
+            [qback.avatar.avatar-generator :as avatar]))
 
-(def last-request (atom {}))
 
-(defn what-is-my-ip [request]
-  (println "====================")
-  (println (str request))
-  (println "====================")
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body (str "My IP is: " (:remote-addr request))})
+(defn avatar-resp [request]
+  (pprint/pprint request)
+  (println "===========================================")
+  (let [image-data (avatar/cat-avatar (Long/valueOf (get-in request [:params "seed"])))]
+    {:status 200
+     :headers {"Content-Type" "image/png"}
+     :body image-data}))
 
+(def handler
+  (-> avatar-resp
+      (wrap-params)))

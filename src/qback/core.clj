@@ -5,6 +5,6 @@
 
 (defn -main 
   [& args]
-  (jetty/run-jetty controller/what-is-my-ip {:port 3000
+  (jetty/run-jetty controller/my-ip {:port 3000
                                              :join? false}))
 

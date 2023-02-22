@@ -1,3 +1,5 @@
-(ns user)
+(ns user
+  (:require [clojure.java.io :as io]
+            [qback.utils.file-utils :as fu]))
 
-(println "Hello shit")
+(fu/apply-to-every-line (io/resource "startlogo.txt") println)
