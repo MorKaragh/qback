@@ -13,5 +13,6 @@
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}
              :dev {:source-paths ["dev"]}}
-  :ring {:handler qback.controller.handlers/handler}
+  :ring {:handler qback.controller.handlers/handler
+         :port 3001}
   :plugins [[lein-ring "0.12.5"]])
