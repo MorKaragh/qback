@@ -2,11 +2,17 @@
   (:require [qback.avatar.avatar-generator :as avatar]
             [qback.utils.response-utils :as resp]))
 
+(defn avatar-resp [factory]
+  (fn [{{:keys [seed]} :params}]
+    (let [image-data (factory (Long/valueOf seed))]
+      (resp/png image-data))))
 
-(defn cat-avatar-resp [{:keys [params]}]
-  (let [image-data (avatar/cat-avatar (Long/valueOf (get params "seed")))]
-    (resp/png image-data)))
+(def pixel-avatar-resp
+  (avatar-resp avatar/pixel-avatar))
 
-(defn pixel-avatar-resp [{:keys [params]}]
-  (let [image-data (avatar/pixel-avatar (Long/valueOf (get params "seed")))]
-    (resp/png image-data)))
+(def pixel-avatar-resp-f
+  (avatar-resp avatar/pixel-avatar-f))
+
+(def cat-avatar-resp
+  (avatar-resp avatar/cat-avatar))
+
