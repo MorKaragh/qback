@@ -1,4 +1,4 @@
-(ns middleware.utilitary-middleware
+(ns qback.middleware.utilitary-middleware
   (:require [clojure.pprint :as pprint]))
 
 (defn logger [handler]

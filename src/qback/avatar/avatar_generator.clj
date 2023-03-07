@@ -14,3 +14,4 @@
 
 (defn pixel-avatar-f [seed]
   (.createAsPngBytes pixel-factory-f seed))
+

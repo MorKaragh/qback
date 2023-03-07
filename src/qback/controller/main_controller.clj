@@ -1,5 +1,5 @@
 (ns qback.controller.main-controller
-  (:require [middleware.utilitary-middleware :refer [logger]]
+  (:require [qback.middleware.utilitary-middleware :refer [logger]]
             [qback.avatar.avatar-handlers :as avatar]
             [reitit.ring :as rering]
             [ring.middleware.keyword-params :refer [wrap-keyword-params]]
