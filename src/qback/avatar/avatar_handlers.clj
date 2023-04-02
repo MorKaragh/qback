@@ -4,6 +4,7 @@
 
 (defn avatar-resp [factory]
   (fn [{{:keys [seed]} :params}]
+    (println "getting avatar")
     (let [image-data (factory (Long/valueOf seed))]
       (resp/png image-data))))
 

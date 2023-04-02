@@ -6,6 +6,7 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [org.clojure/java.jdbc "0.3.6"]
                  [ring "1.9.6"]
+                 [ring-cors "0.1.13"]
                  [metosin/reitit-ring "0.6.0"]
                  [com.talanlabs/avatar-generator "1.1.0"]
                  [com.talanlabs/avatar-generator-cat "1.1.0"]
