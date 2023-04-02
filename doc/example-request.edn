@@ -1,0 +1,122 @@
+{:reitit.core/match
+ {:template "/images",
+  :data
+  {:middleware
+   [#object[qback.middleware.utilitary_middleware$logger 0x37068a "qback.middleware.utilitary_middleware$logger@37068a"]
+    #object[ring.middleware.params$wrap_params 0x21552885 "ring.middleware.params$wrap_params@21552885"]
+    #object[ring.middleware.keyword_params$wrap_keyword_params 0x439aecc5 "ring.middleware.keyword_params$wrap_keyword_params@439aecc5"]
+    #object[qback.controller.main_controller$cors_mw 0x2570ff4e "qback.controller.main_controller$cors_mw@2570ff4e"]],
+   :post
+   {:handler
+    #object[qback.files.files$upload_handler 0x359cafcd "qback.files.files$upload_handler@359cafcd"]},
+   :options
+   {:handler
+    #object[qback.files.files$upload_handler_opt 0x4ab38bef "qback.files.files$upload_handler_opt@4ab38bef"]}},
+  :result
+  {:get nil,
+   :head nil,
+   :post
+   {:data
+    {:middleware
+     [#object[qback.middleware.utilitary_middleware$logger 0x37068a "qback.middleware.utilitary_middleware$logger@37068a"]
+      #object[ring.middleware.params$wrap_params 0x21552885 "ring.middleware.params$wrap_params@21552885"]
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x439aecc5 "ring.middleware.keyword_params$wrap_keyword_params@439aecc5"]
+      #object[qback.controller.main_controller$cors_mw 0x2570ff4e "qback.controller.main_controller$cors_mw@2570ff4e"]],
+     :handler
+     #object[qback.files.files$upload_handler 0x359cafcd "qback.files.files$upload_handler@359cafcd"]},
+    :handler
+    #object[qback.middleware.utilitary_middleware$logger$fn__2824 0x7d4857a6 "qback.middleware.utilitary_middleware$logger$fn__2824@7d4857a6"],
+    :path "/images",
+    :method :post,
+    :middleware
+    [{:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$logger 0x37068a "qback.middleware.utilitary_middleware$logger@37068a"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.params$wrap_params 0x21552885 "ring.middleware.params$wrap_params@21552885"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x439aecc5 "ring.middleware.keyword_params$wrap_keyword_params@439aecc5"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.controller.main_controller$cors_mw 0x2570ff4e "qback.controller.main_controller$cors_mw@2570ff4e"],
+      :spec nil}]},
+   :put nil,
+   :delete nil,
+   :connect nil,
+   :options
+   {:data
+    {:middleware
+     [#object[qback.middleware.utilitary_middleware$logger 0x37068a "qback.middleware.utilitary_middleware$logger@37068a"]
+      #object[ring.middleware.params$wrap_params 0x21552885 "ring.middleware.params$wrap_params@21552885"]
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x439aecc5 "ring.middleware.keyword_params$wrap_keyword_params@439aecc5"]
+      #object[qback.controller.main_controller$cors_mw 0x2570ff4e "qback.controller.main_controller$cors_mw@2570ff4e"]],
+     :handler
+     #object[qback.files.files$upload_handler_opt 0x4ab38bef "qback.files.files$upload_handler_opt@4ab38bef"]},
+    :handler
+    #object[qback.middleware.utilitary_middleware$logger$fn__2824 0x5cd20187 "qback.middleware.utilitary_middleware$logger$fn__2824@5cd20187"],
+    :path "/images",
+    :method :options,
+    :middleware
+    [{:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$logger 0x37068a "qback.middleware.utilitary_middleware$logger@37068a"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.params$wrap_params 0x21552885 "ring.middleware.params$wrap_params@21552885"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x439aecc5 "ring.middleware.keyword_params$wrap_keyword_params@439aecc5"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.controller.main_controller$cors_mw 0x2570ff4e "qback.controller.main_controller$cors_mw@2570ff4e"],
+      :spec nil}]},
+   :trace nil,
+   :patch nil},
+  :path-params {},
+  :path "/images"},
+ :reitit.core/router
+ #object[reitit.core$lookup_router$reify__3988 0x39d961ea "reitit.core$lookup_router$reify__3988@39d961ea"],
+ :ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "[0:0:0:0:0:0:0:1]",
+ :headers
+ {"origin" "http://localhost:3000",
+  "sec-fetch-site" "same-site",
+  "sec-ch-ua-mobile" "?0",
+  "host" "localhost:3001",
+  "user-agent"
+  "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+  "content-type"
+  "multipart/form-data; boundary=----WebKitFormBoundaryifl0GqDX6u8AGwmC",
+  "content-length" "1417",
+  "sec-ch-ua"
+  "\"Google Chrome\";v=\"111\", \"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"111\"",
+  "sec-ch-ua-platform" "\"Linux\"",
+  "referer" "http://localhost:3000/",
+  "connection" "keep-alive",
+  "accept" "*/*",
+  "accept-language" "en-US,en;q=0.9",
+  "sec-fetch-dest" "empty",
+  "accept-encoding" "gzip, deflate, br",
+  "sec-fetch-mode" "cors"},
+ :server-port 3001,
+ :content-length 1417,
+ :content-type
+ "multipart/form-data; boundary=----WebKitFormBoundaryifl0GqDX6u8AGwmC",
+ :character-encoding nil,
+ :uri "/images",
+ :server-name "localhost",
+ :query-string nil,
+ :path-params {},
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x451304ca "HttpInputOverHTTP@451304ca[c=0,q=0,[0]=null,s=STREAM]"],
+ :scheme :http,
+ :request-method :post}
