@@ -1,0 +1,515 @@
+{
+    "agent": {
+      "agentContractNumber": "string",
+      "agentContractId": 0,
+      "agentName": "string",
+      "agentSubjectId": 0,
+      "channel": "string",
+      "channelSaleId": 0,
+      "department": "string",
+      "departmentId": 0,
+      "login": "string",
+      "managerName": "string",
+      "managerSubjectId": 0,
+      "signerName": "string",
+      "signSubjectId": 0,
+      "commission": 0
+    },
+    "calculation": {
+      "attachments": [
+        {
+          "attached": true,
+          "type": "Опись имущества"
+        }
+      ],
+      "calcDate": {},
+      "calcType": "FIRST",
+      "emailUnder": "string",
+      "loyaltyScore": 180,
+      "maxLoyaltyScore": 180,
+      "promoCode": "WINTER2021",
+      "projectId": "5a339d0d-3baa-3ef2-8527-eaa78253a222",
+      "systemDescriptor": "AlfaPolicy",
+      "userName": "A1_ERMAKOVAAI",
+      "userRole": "AGENT",
+      "projectComment": "Незавершенное строительство по одному объекту, заканчивают ремонтные работы"
+    },
+    "insurance": {
+      "agreementType": "Первоначальный",
+      "address": {
+        "country": "Россия",
+        "region": "Оренбургская область",
+        "area": "Тоцкий район",
+        "city": "г Дмитров",
+        "settlement": "село Погромное",
+        "street": "ул Проектируемая",
+        "house": "д 12/13",
+        "block": "к 1 стр 3",
+        "flat": "кв 2",
+        "fullAddress": "Россия, Оренбургская обл, Тоцкий р-н, село Погромное, ул Ленина, д 5",
+        "fiasId": "64c05207-def8-40d9-b577-e36e1f353a83",
+        "postalCode": 123123,
+        "addressId": 0,
+        "addressType": 0
+      },
+      "addressText": "г Москва, 1-й Мосфильмовский пер, д 1",
+      "cadastralNumber": "50:12:0050305:94",
+      "franchiseSize": 10000,
+      "commission": 3000,
+      "commissionMultiplier": 0.8,
+      "discountProgram": "Сотрудник АС",
+      "installmentPlan": "Единовременно",
+      "insuranceTerm": {
+        "beginDate": "2023-02-22T10:47:42.095Z",
+        "endDate": "2023-02-22T10:47:42.095Z"
+      },
+      "underwritingDiscount": 0.3
+    },
+    "insurant": {
+      "person": {
+        "subjectId": 0,
+        "sex": "male",
+        "isResident": true,
+        "lastName": "Иванов",
+        "firstName": "Иван",
+        "middleName": "Иванович",
+        "birthDate": "2000-01-01",
+        "address": {
+          "country": "Россия",
+          "region": "Оренбургская область",
+          "area": "Тоцкий район",
+          "city": "г Дмитров",
+          "settlement": "село Погромное",
+          "street": "ул Проектируемая",
+          "house": "д 12/13",
+          "block": "к 1 стр 3",
+          "flat": "кв 2",
+          "fullAddress": "Россия, Оренбургская обл, Тоцкий р-н, село Погромное, ул Ленина, д 5",
+          "fiasId": "64c05207-def8-40d9-b577-e36e1f353a83",
+          "postalCode": 123123,
+          "addressId": 0,
+          "addressType": 0
+        },
+        "document": {
+          "documentId": 0,
+          "countryCode": "68",
+          "docType": 102,
+          "docTypeName": "Паспорт РФ",
+          "docSeries": "1679",
+          "docNumber": "79461382",
+          "issueDate": "2010-10-01",
+          "endDate": "2010-10-01"
+        },
+        "phone": {
+          "phone": "8(903)6400102",
+          "phoneType": 3
+        },
+        "email": "sample@example.com",
+        "inn": 644901371112,
+        "snils": "126029036 48"
+      },
+      "selfEmployed": {
+        "subjectId": 0,
+        "sex": "male",
+        "isResident": true,
+        "lastName": "Иванов",
+        "firstName": "Иван",
+        "middleName": "Иванович",
+        "birthDate": "2000-01-01",
+        "address": {
+          "country": "Россия",
+          "region": "Оренбургская область",
+          "area": "Тоцкий район",
+          "city": "г Дмитров",
+          "settlement": "село Погромное",
+          "street": "ул Проектируемая",
+          "house": "д 12/13",
+          "block": "к 1 стр 3",
+          "flat": "кв 2",
+          "fullAddress": "Россия, Оренбургская обл, Тоцкий р-н, село Погромное, ул Ленина, д 5",
+          "fiasId": "64c05207-def8-40d9-b577-e36e1f353a83",
+          "postalCode": 123123,
+          "addressId": 0,
+          "addressType": 0
+        },
+        "document": {
+          "documentId": 0,
+          "countryCode": "68",
+          "docType": 102,
+          "docTypeName": "Паспорт РФ",
+          "docSeries": "1679",
+          "docNumber": "79461382",
+          "issueDate": "2010-10-01",
+          "endDate": "2010-10-01"
+        },
+        "phone": {
+          "phone": "8(903)6400102",
+          "phoneType": 3
+        },
+        "email": "sample@example.com",
+        "inn": 644901371112,
+        "snils": "126029036 48"
+      },
+      "organization": {
+        "subjectId": 0,
+        "residentIndicator": true,
+        "inn": 6449013711,
+        "ogrn": "1026402000658",
+        "kpp": null,
+        "fullName": "Общество с ограниченной ответственностью СтулСбытТрест",
+        "shortName": "ООО СтСбТр",
+        "phone": {
+          "phone": "8(903)6400102",
+          "phoneType": 3
+        },
+        "email": "sample@example.com",
+        "address": {
+          "country": "Россия",
+          "region": "Оренбургская область",
+          "area": "Тоцкий район",
+          "city": "г Дмитров",
+          "settlement": "село Погромное",
+          "street": "ул Проектируемая",
+          "house": "д 12/13",
+          "block": "к 1 стр 3",
+          "flat": "кв 2",
+          "fullAddress": "Россия, Оренбургская обл, Тоцкий р-н, село Погромное, ул Ленина, д 5",
+          "fiasId": "64c05207-def8-40d9-b577-e36e1f353a83",
+          "postalCode": 123123,
+          "addressId": 0,
+          "addressType": 0
+        },
+        "registrationDocument": {
+          "documentId": 0,
+          "countryCode": "68",
+          "docType": 102,
+          "docTypeName": "Паспорт РФ",
+          "docSeries": "1679",
+          "docNumber": "79461382",
+          "issueDate": "2010-10-01",
+          "endDate": "2010-10-01"
+        }
+      }
+    },
+    "beneficiaries": [
+      {
+        "person": {
+          "subjectId": 0,
+          "sex": "male",
+          "isResident": true,
+          "lastName": "Иванов",
+          "firstName": "Иван",
+          "middleName": "Иванович",
+          "birthDate": "2000-01-01",
+          "address": {
+            "country": "Россия",
+            "region": "Оренбургская область",
+            "area": "Тоцкий район",
+            "city": "г Дмитров",
+            "settlement": "село Погромное",
+            "street": "ул Проектируемая",
+            "house": "д 12/13",
+            "block": "к 1 стр 3",
+            "flat": "кв 2",
+            "fullAddress": "Россия, Оренбургская обл, Тоцкий р-н, село Погромное, ул Ленина, д 5",
+            "fiasId": "64c05207-def8-40d9-b577-e36e1f353a83",
+            "postalCode": 123123,
+            "addressId": 0,
+            "addressType": 0
+          },
+          "document": {
+            "documentId": 0,
+            "countryCode": "68",
+            "docType": 102,
+            "docTypeName": "Паспорт РФ",
+            "docSeries": "1679",
+            "docNumber": "79461382",
+            "issueDate": "2010-10-01",
+            "endDate": "2010-10-01"
+          },
+          "phone": {
+            "phone": "8(903)6400102",
+            "phoneType": 3
+          },
+          "email": "sample@example.com",
+          "inn": 644901371112,
+          "snils": "126029036 48"
+        },
+        "selfEmployed": {
+          "subjectId": 0,
+          "sex": "male",
+          "isResident": true,
+          "lastName": "Иванов",
+          "firstName": "Иван",
+          "middleName": "Иванович",
+          "birthDate": "2000-01-01",
+          "address": {
+            "country": "Россия",
+            "region": "Оренбургская область",
+            "area": "Тоцкий район",
+            "city": "г Дмитров",
+            "settlement": "село Погромное",
+            "street": "ул Проектируемая",
+            "house": "д 12/13",
+            "block": "к 1 стр 3",
+            "flat": "кв 2",
+            "fullAddress": "Россия, Оренбургская обл, Тоцкий р-н, село Погромное, ул Ленина, д 5",
+            "fiasId": "64c05207-def8-40d9-b577-e36e1f353a83",
+            "postalCode": 123123,
+            "addressId": 0,
+            "addressType": 0
+          },
+          "document": {
+            "documentId": 0,
+            "countryCode": "68",
+            "docType": 102,
+            "docTypeName": "Паспорт РФ",
+            "docSeries": "1679",
+            "docNumber": "79461382",
+            "issueDate": "2010-10-01",
+            "endDate": "2010-10-01"
+          },
+          "phone": {
+            "phone": "8(903)6400102",
+            "phoneType": 3
+          },
+          "email": "sample@example.com",
+          "inn": 644901371112,
+          "snils": "126029036 48"
+        },
+        "organization": {
+          "subjectId": 0,
+          "residentIndicator": true,
+          "inn": 6449013711,
+          "ogrn": "1026402000658",
+          "kpp": null,
+          "fullName": "Общество с ограниченной ответственностью СтулСбытТрест",
+          "shortName": "ООО СтСбТр",
+          "phone": {
+            "phone": "8(903)6400102",
+            "phoneType": 3
+          },
+          "email": "sample@example.com",
+          "address": {
+            "country": "Россия",
+            "region": "Оренбургская область",
+            "area": "Тоцкий район",
+            "city": "г Дмитров",
+            "settlement": "село Погромное",
+            "street": "ул Проектируемая",
+            "house": "д 12/13",
+            "block": "к 1 стр 3",
+            "flat": "кв 2",
+            "fullAddress": "Россия, Оренбургская обл, Тоцкий р-н, село Погромное, ул Ленина, д 5",
+            "fiasId": "64c05207-def8-40d9-b577-e36e1f353a83",
+            "postalCode": 123123,
+            "addressId": 0,
+            "addressType": 0
+          },
+          "registrationDocument": {
+            "documentId": 0,
+            "countryCode": "68",
+            "docType": 102,
+            "docTypeName": "Паспорт РФ",
+            "docSeries": "1679",
+            "docNumber": "79461382",
+            "issueDate": "2010-10-01",
+            "endDate": "2010-10-01"
+          }
+        }
+      }
+    ],
+    "previousContract": {
+      "company": "РЕСО",
+      "number": "AA-3321-23232-122/6",
+      "sumSize": 500000,
+      "premium": 5000
+    },
+    "go": {
+      "needUnderwriterCoordination": false,
+      "description": "TODO",
+      "included": false,
+      "objectId": "00000000-0000-0000-0000-000000000000",
+      "premium": 5000,
+      "premiumWithoutPromoCode": 5500,
+      "risks": [
+        {
+          "description": "Пожар",
+          "included": false,
+          "name": "ПОЖАР",
+          "riskId": 6647553,
+          "required": false
+        }
+      ],
+      "sumSize": 500000
+    },
+    "homeProperty": {
+      "needUnderwriterCoordination": false,
+      "description": "TODO",
+      "included": false,
+      "propertyObjects": [
+        {
+          "description": "TODO",
+          "objectId": "2a339d0c-3baa-3ef2-8527-eaa78253a221",
+          "name": "Куртка замшевая",
+          "premium": 5000,
+          "premiumWithoutPromoCode": 5500,
+          "sumSize": 500000,
+          "prevSumSize": 540000,
+          "type": "Снегоход"
+        }
+      ],
+      "premium": 5000,
+      "premiumWithoutPromoCode": 5500,
+      "prevSumSize": 1100,
+      "program": "Конструктор",
+      "risks": [
+        {
+          "description": "Пожар",
+          "included": false,
+          "name": "ПОЖАР",
+          "riskId": 6647553,
+          "required": false
+        }
+      ],
+      "sumSize": 500000
+    },
+    "realEstate": {
+      "description": "TODO",
+      "included": false,
+      "realEstateObjects": [
+        {
+          "needUnderwriterCoordination": false,
+          "objectId": "2a339d0c-3baa-3ef2-8527-eaa78253a221",
+          "maxSumSize": 500000,
+          "minSumSize": 300000,
+          "name": "TODO",
+          "objectParameters": [
+            {
+              "code": "RENOVATION_WORK",
+              "dataType": "BOOLEAN",
+              "id": 6884056,
+              "name": "Особые факторы риска: отсутствует пожарная/охранная сигнализация",
+              "prevValue": false,
+              "questionText": "Имеется баня/бассейн/сауна/камин/печь",
+              "regExp": "^(.+)@(\\S+)$",
+              "required": false,
+              "responseMessage": "TODO",
+              "validationSuccess": false,
+              "value": true,
+              "visible": "ANDER"
+            }
+          ],
+          "premium": 5000,
+          "premiumWithoutPromoCode": 5500,
+          "sumSize": 500000,
+          "prevSumSize": 540000,
+          "type": "Баня",
+          "program": "Конструктор",
+          "risks": [
+            {
+              "description": "Пожар",
+              "included": false,
+              "name": "ПОЖАР",
+              "riskId": 6647553,
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    "specialProperty": {
+      "needUnderwriterCoordination": false,
+      "description": "TODO",
+      "included": false,
+      "propertyObjects": [
+        {
+          "description": "TODO",
+          "objectId": "2a339d0c-3baa-3ef2-8527-eaa78253a221",
+          "name": "Куртка замшевая",
+          "premium": 5000,
+          "premiumWithoutPromoCode": 5500,
+          "sumSize": 500000,
+          "prevSumSize": 540000,
+          "type": "Снегоход"
+        }
+      ],
+      "premium": 5000,
+      "premiumWithoutPromoCode": 5500,
+      "prevSumSize": 1100,
+      "program": "Конструктор",
+      "risks": [
+        {
+          "description": "Пожар",
+          "included": false,
+          "name": "ПОЖАР",
+          "riskId": 6647553,
+          "required": false
+        }
+      ],
+      "sumSize": 500000
+    },
+    "valuableProperty": {
+      "needUnderwriterCoordination": false,
+      "description": "TODO",
+      "included": false,
+      "propertyObjects": [
+        {
+          "description": "TODO",
+          "objectId": "2a339d0c-3baa-3ef2-8527-eaa78253a221",
+          "name": "Куртка замшевая",
+          "premium": 5000,
+          "premiumWithoutPromoCode": 5500,
+          "sumSize": 500000,
+          "prevSumSize": 540000,
+          "type": "Снегоход"
+        }
+      ],
+      "premium": 5000,
+      "premiumWithoutPromoCode": 5500,
+      "prevSumSize": 1100,
+      "program": "Конструктор",
+      "risks": [
+        {
+          "description": "Пожар",
+          "included": false,
+          "name": "ПОЖАР",
+          "riskId": 6647553,
+          "required": false
+        }
+      ],
+      "sumSize": 500000
+    },
+    "additionalRisks": [
+      {
+        "code": "RENOVATION_WORK",
+        "dataType": "BOOLEAN",
+        "id": 6884056,
+        "name": "Особые факторы риска: отсутствует пожарная/охранная сигнализация",
+        "prevValue": false,
+        "questionText": "Имеется баня/бассейн/сауна/камин/печь",
+        "regExp": "^(.+)@(\\S+)$",
+        "required": false,
+        "responseMessage": "TODO",
+        "validationSuccess": false,
+        "value": true,
+        "visible": "ANDER"
+      }
+    ],
+    "riskFactors": [
+      {
+        "code": "RENOVATION_WORK",
+        "dataType": "BOOLEAN",
+        "id": 6884056,
+        "name": "Особые факторы риска: отсутствует пожарная/охранная сигнализация",
+        "prevValue": false,
+        "questionText": "Имеется баня/бассейн/сауна/камин/печь",
+        "regExp": "^(.+)@(\\S+)$",
+        "required": false,
+        "responseMessage": "TODO",
+        "validationSuccess": false,
+        "value": true,
+        "visible": "ANDER"
+      }
+    ]
+  }
