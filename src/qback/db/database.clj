@@ -1,37 +1,30 @@
 (ns qback.db.database
   (:require [clojure.java.jdbc :as jdbc]
-            [hikari-cp.core :as pool]))
+            [hikari-cp.core :as pool]
+            [qback.utils.properties :refer [props]]))
 
-(def datasource-options {:adapter "h2"
-                         :url     "jdbc:h2:~/test"})
-
-(def h2-settings
-  {:classname   "org.h2.Driver"
-   :subprotocol "h2:file:./data/qdata"
-   :subname     "demo;DB_CLOSE_DELAY=-1"
-   :user        "sa"
-   :password    ""})
-
-(jdbc/db-do-commands
- h2-settings
- (jdbc/create-table-ddl :filetable
-                        [:name "varchar(3200)"]
-                        [:path "varchar(3200)"]
-                        [:origname "varchar(3200)"]))
-
-(jdbc/insert!
- h2-settings
- :filetable {:name "superfile"
-             :path "superpath"
-             :origname "superorigin"})
-
-(jdbc/query h2-settings ["select * from filetable limit 10"])
 
 (defonce datasource
-  (delay (pool/make-datasource datasource-options)))
+  (delay (pool/make-datasource (:hikari-settings props))))
+
+(try 
+  (jdbc/with-db-connection [conn {:datasource @datasource}]
+   (jdbc/db-do-commands
+    conn
+    (jdbc/create-table-ddl :images
+                           [:id "BIGINT AUTO_INCREMENT PRIMARY KEY"]
+                           [:name "VARCHAR(100)"]
+                           [:path "VARCHAR(200)"])))
+  (catch Exception e (println "table already exists")))
+
+(defn insert! [table options]
+  (println options)
+  (jdbc/with-db-connection [conn {:datasource @datasource}]
+    (jdbc/insert! conn table options)))
 
 (jdbc/with-db-connection [conn {:datasource @datasource}]
-  (let [rows (jdbc/query conn "SELECT 0")]
-    (println rows)))
+  (jdbc/query
+   conn
+   ["select * from images"]))
 
-(pool/close-datasource @datasource)
+;; (pool/close-datasource @datasource)
