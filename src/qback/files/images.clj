@@ -3,12 +3,17 @@
             [clojure.java.io :as io]
             [qback.utils.properties :refer [props]]))
 
-(defn upload-handler [req]
+
+
+(defn image-upl-handler [req]
   (let [file-data (get-in req [:multipart-params "uplfile"])
-        file-name (:filename file-data)
         file (:tempfile file-data)
-        dest (io/file (str (:img-path props) file-name))]
-    (io/copy file dest)
+        file-name (:filename file-data)
+        dest-file-name (str (:img-path props) file-name)
+        dest-file (io/file dest-file-name)]
+    
+    (io/copy file dest-file)
+    
     {:status 200
-     :body "Hello, uploader!"})
+     :body {:filename dest-file-name}})
   )

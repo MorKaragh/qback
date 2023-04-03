@@ -1,7 +1,7 @@
 (ns qback.controller.main-controller
   (:require [qback.avatar.avatar-handlers :as avatar]
             [qback.blog.blog :as blg]
-            [qback.files.images :refer [upload-handler]]
+            [qback.files.images :refer [image-upl-handler]]
             [qback.middleware.utilitary-middleware :refer [cors-mw logger]]
             [reitit.ring :as rering]
             [ring.middleware.keyword-params :refer [wrap-keyword-params]]
@@ -24,9 +24,8 @@
     ["/pixel-f" avatar/pixel-avatar-resp-f]]
    ["blog"
     ["/posts" {:get blg/get-handler}]]
-   ["images" {:post upload-handler
+   ["images" {:post image-upl-handler
               :middleware [wrap-multipart-params]}]])
-
 
 (def controller
   (rering/ring-handler
