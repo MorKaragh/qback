@@ -22,9 +22,10 @@
   (jdbc/with-db-connection [conn {:datasource @datasource}]
     (jdbc/insert! conn table options)))
 
-(jdbc/with-db-connection [conn {:datasource @datasource}]
-  (jdbc/query
-   conn
-   ["select * from images"]))
+(comment 
+  (jdbc/with-db-connection [conn {:datasource @datasource}]
+   (jdbc/query
+    conn
+    ["select * from images"])))
 
 ;; (pool/close-datasource @datasource)

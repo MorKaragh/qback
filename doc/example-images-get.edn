@@ -1,0 +1,336 @@
+{:reitit.core/match
+ {:template "/images",
+  :data
+  {:middleware
+   [#object[ring.middleware.params$wrap_params 0x2d70bcd0 "ring.middleware.params$wrap_params@2d70bcd0"]
+    #object[ring.middleware.keyword_params$wrap_keyword_params 0x39134a12 "ring.middleware.keyword_params$wrap_keyword_params@39134a12"]
+    #object[qback.middleware.utilitary_middleware$cors_mw 0x1254c68d "qback.middleware.utilitary_middleware$cors_mw@1254c68d"]
+    #object[qback.middleware.utilitary_middleware$logger 0x452c8829 "qback.middleware.utilitary_middleware$logger@452c8829"]
+    #object[ring.middleware.multipart_params$wrap_multipart_params 0x2e2e33e2 "ring.middleware.multipart_params$wrap_multipart_params@2e2e33e2"]],
+   :get
+   {:handler
+    #object[qback.files.images_handler$get_image_handler 0x21578613 "qback.files.images_handler$get_image_handler@21578613"]},
+   :post
+   {:handler
+    #object[qback.files.images_handler$image_upl_handler 0x257be18c "qback.files.images_handler$image_upl_handler@257be18c"]}},
+  :result
+  {:get
+   {:data
+    {:middleware
+     [#object[ring.middleware.params$wrap_params 0x2d70bcd0 "ring.middleware.params$wrap_params@2d70bcd0"]
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x39134a12 "ring.middleware.keyword_params$wrap_keyword_params@39134a12"]
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1254c68d "qback.middleware.utilitary_middleware$cors_mw@1254c68d"]
+      #object[qback.middleware.utilitary_middleware$logger 0x452c8829 "qback.middleware.utilitary_middleware$logger@452c8829"]
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x2e2e33e2 "ring.middleware.multipart_params$wrap_multipart_params@2e2e33e2"]],
+     :handler
+     #object[qback.files.images_handler$get_image_handler 0x21578613 "qback.files.images_handler$get_image_handler@21578613"]},
+    :handler
+    #object[ring.middleware.params$wrap_params$fn__2631 0x699d7799 "ring.middleware.params$wrap_params$fn__2631@699d7799"],
+    :path "/images",
+    :method :get,
+    :middleware
+    [{:name nil,
+      :wrap
+      #object[ring.middleware.params$wrap_params 0x2d70bcd0 "ring.middleware.params$wrap_params@2d70bcd0"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x39134a12 "ring.middleware.keyword_params$wrap_keyword_params@39134a12"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1254c68d "qback.middleware.utilitary_middleware$cors_mw@1254c68d"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$logger 0x452c8829 "qback.middleware.utilitary_middleware$logger@452c8829"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x2e2e33e2 "ring.middleware.multipart_params$wrap_multipart_params@2e2e33e2"],
+      :spec nil}]},
+   :head nil,
+   :post
+   {:data
+    {:middleware
+     [#object[ring.middleware.params$wrap_params 0x2d70bcd0 "ring.middleware.params$wrap_params@2d70bcd0"]
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x39134a12 "ring.middleware.keyword_params$wrap_keyword_params@39134a12"]
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1254c68d "qback.middleware.utilitary_middleware$cors_mw@1254c68d"]
+      #object[qback.middleware.utilitary_middleware$logger 0x452c8829 "qback.middleware.utilitary_middleware$logger@452c8829"]
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x2e2e33e2 "ring.middleware.multipart_params$wrap_multipart_params@2e2e33e2"]],
+     :handler
+     #object[qback.files.images_handler$image_upl_handler 0x257be18c "qback.files.images_handler$image_upl_handler@257be18c"]},
+    :handler
+    #object[ring.middleware.params$wrap_params$fn__2631 0xd54d77d "ring.middleware.params$wrap_params$fn__2631@d54d77d"],
+    :path "/images",
+    :method :post,
+    :middleware
+    [{:name nil,
+      :wrap
+      #object[ring.middleware.params$wrap_params 0x2d70bcd0 "ring.middleware.params$wrap_params@2d70bcd0"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x39134a12 "ring.middleware.keyword_params$wrap_keyword_params@39134a12"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1254c68d "qback.middleware.utilitary_middleware$cors_mw@1254c68d"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$logger 0x452c8829 "qback.middleware.utilitary_middleware$logger@452c8829"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x2e2e33e2 "ring.middleware.multipart_params$wrap_multipart_params@2e2e33e2"],
+      :spec nil}]},
+   :put nil,
+   :delete nil,
+   :connect nil,
+   :options
+   {:data
+    {:middleware
+     [#object[ring.middleware.params$wrap_params 0x2d70bcd0 "ring.middleware.params$wrap_params@2d70bcd0"]
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x39134a12 "ring.middleware.keyword_params$wrap_keyword_params@39134a12"]
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1254c68d "qback.middleware.utilitary_middleware$cors_mw@1254c68d"]
+      #object[qback.middleware.utilitary_middleware$logger 0x452c8829 "qback.middleware.utilitary_middleware$logger@452c8829"]
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x2e2e33e2 "ring.middleware.multipart_params$wrap_multipart_params@2e2e33e2"]],
+     :no-doc true,
+     :handler
+     #object[reitit.ring$fn__5324$fn__5333 0x46ba0774 "reitit.ring$fn__5324$fn__5333@46ba0774"]},
+    :handler
+    #object[ring.middleware.params$wrap_params$fn__2631 0x18c5587d "ring.middleware.params$wrap_params$fn__2631@18c5587d"],
+    :path "/images",
+    :method :options,
+    :middleware
+    [{:name nil,
+      :wrap
+      #object[ring.middleware.params$wrap_params 0x2d70bcd0 "ring.middleware.params$wrap_params@2d70bcd0"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x39134a12 "ring.middleware.keyword_params$wrap_keyword_params@39134a12"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1254c68d "qback.middleware.utilitary_middleware$cors_mw@1254c68d"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$logger 0x452c8829 "qback.middleware.utilitary_middleware$logger@452c8829"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x2e2e33e2 "ring.middleware.multipart_params$wrap_multipart_params@2e2e33e2"],
+      :spec nil}]},
+   :trace nil,
+   :patch nil},
+  :path-params {},
+  :path "/images"},
+ :reitit.core/router
+ #object[reitit.core$lookup_router$reify__4932 0x46fc3a5d "reitit.core$lookup_router$reify__4932@46fc3a5d"],
+ :ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "127.0.0.1",
+ :params {},
+ :headers
+ {"accept" "*/*",
+  "user-agent" "insomnia/2022.7.5",
+  "host" "localhost:3001",
+  "content-length" "5",
+  "content-type" "application/json"},
+ :server-port 3001,
+ :content-length 5,
+ :form-params {},
+ :query-params {},
+ :content-type "application/json",
+ :character-encoding "UTF-8",
+ :uri "/images",
+ :server-name "localhost",
+ :query-string nil,
+ :path-params {},
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x396039c7 "HttpInputOverHTTP@396039c7[c=0,q=0,[0]=null,s=STREAM]"],
+ :scheme :http,
+ :request-method :get}
+nil
+----------- REQUEST STOP -----------
+----------- RESPONSE START -----------
+{:status 200}
+nil
+----------- RESPONNSE STOP -----------
+^C^Csergei@note:~/workspace/clojure/qback$ lein ring server
+      _ _ _ _             _ _ _ _ _ _             _ _ _ _               _ _ _ _         _ _       _ _ _    
+    /   _ _   \         ( _       _   \         (         )           /   _ _ _ )     ( )   )   /   _ _ )  
+  /   /     \   \           )   ( _ )   )       /   / \   \         /   /             (   ( _ /   /        
+(   (         )   )         \       _ /       (   ( _ _ )   )     (   (               ( )       (          
+(   (     / \ )   )         /     _   \         )         (       (   (               ( )   / \   \        
+  \   \ _ \   \ /         _ )   ( _ )   )     /     / \     \       \   \ _ _ _       (   (     \   \      
+    \ _ _ _ \   \ _     ( _ _ _ _ _ _ /     / _ _ (     ) _ _ \       \ _ _ _ _ )     ( ) _ )     \ _ \    
+              \ _ _ )                                                                                      
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#noProviders for further details.
+WARNING: seqable? already refers to: #'clojure.core/seqable? in namespace: clojure.core.incubator, being replaced by: #'clojure.core.incubator/seqable?
+table already exists
+Started server on port 3001
+----------- REQUEST START -----------
+{:reitit.core/match
+ {:template "/images/:hash",
+  :data
+  {:middleware
+   [#object[ring.middleware.params$wrap_params 0x13fbedaf "ring.middleware.params$wrap_params@13fbedaf"]
+    #object[ring.middleware.keyword_params$wrap_keyword_params 0x26f83bc0 "ring.middleware.keyword_params$wrap_keyword_params@26f83bc0"]
+    #object[qback.middleware.utilitary_middleware$cors_mw 0x1453eee5 "qback.middleware.utilitary_middleware$cors_mw@1453eee5"]
+    #object[qback.middleware.utilitary_middleware$logger 0x28418eba "qback.middleware.utilitary_middleware$logger@28418eba"]
+    #object[ring.middleware.multipart_params$wrap_multipart_params 0x5c63dde9 "ring.middleware.multipart_params$wrap_multipart_params@5c63dde9"]],
+   :get
+   {:handler
+    #object[qback.files.images_handler$get_image_handler 0x3ba2db9e "qback.files.images_handler$get_image_handler@3ba2db9e"]},
+   :post
+   {:handler
+    #object[qback.files.images_handler$image_upl_handler 0x156acca8 "qback.files.images_handler$image_upl_handler@156acca8"]}},
+  :result
+  {:get
+   {:data
+    {:middleware
+     [#object[ring.middleware.params$wrap_params 0x13fbedaf "ring.middleware.params$wrap_params@13fbedaf"]
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x26f83bc0 "ring.middleware.keyword_params$wrap_keyword_params@26f83bc0"]
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1453eee5 "qback.middleware.utilitary_middleware$cors_mw@1453eee5"]
+      #object[qback.middleware.utilitary_middleware$logger 0x28418eba "qback.middleware.utilitary_middleware$logger@28418eba"]
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x5c63dde9 "ring.middleware.multipart_params$wrap_multipart_params@5c63dde9"]],
+     :handler
+     #object[qback.files.images_handler$get_image_handler 0x3ba2db9e "qback.files.images_handler$get_image_handler@3ba2db9e"]},
+    :handler
+    #object[ring.middleware.params$wrap_params$fn__2631 0x6ec362 "ring.middleware.params$wrap_params$fn__2631@6ec362"],
+    :path "/images/:hash",
+    :method :get,
+    :middleware
+    [{:name nil,
+      :wrap
+      #object[ring.middleware.params$wrap_params 0x13fbedaf "ring.middleware.params$wrap_params@13fbedaf"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x26f83bc0 "ring.middleware.keyword_params$wrap_keyword_params@26f83bc0"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1453eee5 "qback.middleware.utilitary_middleware$cors_mw@1453eee5"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$logger 0x28418eba "qback.middleware.utilitary_middleware$logger@28418eba"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x5c63dde9 "ring.middleware.multipart_params$wrap_multipart_params@5c63dde9"],
+      :spec nil}]},
+   :head nil,
+   :post
+   {:data
+    {:middleware
+     [#object[ring.middleware.params$wrap_params 0x13fbedaf "ring.middleware.params$wrap_params@13fbedaf"]
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x26f83bc0 "ring.middleware.keyword_params$wrap_keyword_params@26f83bc0"]
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1453eee5 "qback.middleware.utilitary_middleware$cors_mw@1453eee5"]
+      #object[qback.middleware.utilitary_middleware$logger 0x28418eba "qback.middleware.utilitary_middleware$logger@28418eba"]
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x5c63dde9 "ring.middleware.multipart_params$wrap_multipart_params@5c63dde9"]],
+     :handler
+     #object[qback.files.images_handler$image_upl_handler 0x156acca8 "qback.files.images_handler$image_upl_handler@156acca8"]},
+    :handler
+    #object[ring.middleware.params$wrap_params$fn__2631 0x45af3a8 "ring.middleware.params$wrap_params$fn__2631@45af3a8"],
+    :path "/images/:hash",
+    :method :post,
+    :middleware
+    [{:name nil,
+      :wrap
+      #object[ring.middleware.params$wrap_params 0x13fbedaf "ring.middleware.params$wrap_params@13fbedaf"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x26f83bc0 "ring.middleware.keyword_params$wrap_keyword_params@26f83bc0"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1453eee5 "qback.middleware.utilitary_middleware$cors_mw@1453eee5"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$logger 0x28418eba "qback.middleware.utilitary_middleware$logger@28418eba"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x5c63dde9 "ring.middleware.multipart_params$wrap_multipart_params@5c63dde9"],
+      :spec nil}]},
+   :put nil,
+   :delete nil,
+   :connect nil,
+   :options
+   {:data
+    {:middleware
+     [#object[ring.middleware.params$wrap_params 0x13fbedaf "ring.middleware.params$wrap_params@13fbedaf"]
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x26f83bc0 "ring.middleware.keyword_params$wrap_keyword_params@26f83bc0"]
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1453eee5 "qback.middleware.utilitary_middleware$cors_mw@1453eee5"]
+      #object[qback.middleware.utilitary_middleware$logger 0x28418eba "qback.middleware.utilitary_middleware$logger@28418eba"]
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x5c63dde9 "ring.middleware.multipart_params$wrap_multipart_params@5c63dde9"]],
+     :no-doc true,
+     :handler
+     #object[reitit.ring$fn__5324$fn__5333 0xf0b316b "reitit.ring$fn__5324$fn__5333@f0b316b"]},
+    :handler
+    #object[ring.middleware.params$wrap_params$fn__2631 0x742862b "ring.middleware.params$wrap_params$fn__2631@742862b"],
+    :path "/images/:hash",
+    :method :options,
+    :middleware
+    [{:name nil,
+      :wrap
+      #object[ring.middleware.params$wrap_params 0x13fbedaf "ring.middleware.params$wrap_params@13fbedaf"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.keyword_params$wrap_keyword_params 0x26f83bc0 "ring.middleware.keyword_params$wrap_keyword_params@26f83bc0"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$cors_mw 0x1453eee5 "qback.middleware.utilitary_middleware$cors_mw@1453eee5"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[qback.middleware.utilitary_middleware$logger 0x28418eba "qback.middleware.utilitary_middleware$logger@28418eba"],
+      :spec nil}
+     {:name nil,
+      :wrap
+      #object[ring.middleware.multipart_params$wrap_multipart_params 0x5c63dde9 "ring.middleware.multipart_params$wrap_multipart_params@5c63dde9"],
+      :spec nil}]},
+   :trace nil,
+   :patch nil},
+  :path-params {:hash "aabbcc"},
+  :path "/images/aabbcc"},
+ :reitit.core/router
+ #object[reitit.core$mixed_router$reify__4978 0x4cca7812 "reitit.core$mixed_router$reify__4978@4cca7812"],
+ :ssl-client-cert nil,
+ :protocol "HTTP/1.1",
+ :remote-addr "127.0.0.1",
+ :params {},
+ :headers
+ {"accept" "*/*",
+  "user-agent" "insomnia/2022.7.5",
+  "host" "localhost:3001",
+  "content-length" "5",
+  "content-length" "5",
+  "content-type" "application/json"},
+ :server-port 3001,
+ :content-length 5,
+ :form-params {},
+ :query-params {},
+ :content-type "application/json",
+ :character-encoding "UTF-8",
+ :uri "/images/aabbcc",
+ :server-name "localhost",
+ :query-string nil,
+ :path-params {:hash "aabbcc"},
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x346eef9b "HttpInputOverHTTP@346eef9b[c=0,q=0,[0]=null,s=STREAM]"],
+ :scheme :http,
+ :request-method :get}
+nil

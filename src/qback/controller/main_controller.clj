@@ -1,7 +1,7 @@
 (ns qback.controller.main-controller
   (:require [qback.avatar.avatar-handlers :as avatar]
             [qback.blog.blog :as blg]
-            [qback.files.images-handler :refer [image-upl-handler]]
+            [qback.files.images-handler :refer [image-upl-handler get-image-handler]]
             [qback.middleware.utilitary-middleware :refer [cors-mw logger]]
             [reitit.ring :as rering]
             [ring.middleware.keyword-params :refer [wrap-keyword-params]]
@@ -15,8 +15,7 @@
   ["/" {:middleware [wrap-params
                      wrap-keyword-params
                      cors-mw
-                    ;;  logger
-                     ]}
+                     logger]}
    ["favicon.ico" (fn [_] (resp/resource-response "favicon.ico"))]
    ["avatar"
     ["/cat" avatar/cat-avatar-resp]
@@ -24,8 +23,9 @@
     ["/pixel-f" avatar/pixel-avatar-resp-f]]
    ["blog"
     ["/posts" {:get blg/get-handler}]]
-   ["images" {:post image-upl-handler
-              :middleware [wrap-multipart-params]}]])
+   ["images/:hash" {:get get-image-handler
+                    :post image-upl-handler
+                    :middleware [wrap-multipart-params]}]])
 
 (def controller
   (rering/ring-handler
