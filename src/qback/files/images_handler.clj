@@ -1,9 +1,9 @@
 (ns qback.files.images-handler
-  (:require [clojure.pprint :as pprint]
-            [clojure.java.io :as io]
+  (:require [clojure.java.io :as io]
             [qback.files.images-db :as db]
+            [qback.utils.file-utils :as futils]
             [qback.utils.properties :refer [props]]
-            [qback.utils.file-utils :as futils]))
+            [qback.utils.response-utils :as resp]))
 
 
 (defn get-dirs [s]
@@ -19,8 +19,7 @@
     (when (futils/ensure-file-exists dest-file)
       (io/copy file dest-file)
       (db/save-file-info {:name file-name :path dest-file-path}))
-    {:status 200
-     :body {:filename dest-file-path}}))
+    (resp/json {:hash hash})))
 
 
 (defn get-image-handler [{{:keys [hash]} :path-params}] 

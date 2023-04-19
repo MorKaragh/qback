@@ -23,9 +23,9 @@
     ["/pixel-f" avatar/pixel-avatar-resp-f]]
    ["blog"
     ["/posts" {:get blg/get-handler}]]
-   ["images/:hash" {:get get-image-handler
-                    :post image-upl-handler
-                    :middleware [wrap-multipart-params]}]])
+   ["images" {:get get-image-handler 
+              :post image-upl-handler
+              :middleware [wrap-multipart-params]}]])
 
 (def controller
   (rering/ring-handler

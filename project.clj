@@ -12,7 +12,8 @@
                  [com.talanlabs/avatar-generator-cat "1.1.0"]
                  [com.talanlabs/avatar-generator-8bit "1.1.0"]
                  [com.h2database/h2 "1.4.200"]
-                 [hikari-cp "3.0.1"]]
+                 [hikari-cp "3.0.1"]
+                 [cheshire "5.11.0"]]
   :main ^:skip-aot qback.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}
