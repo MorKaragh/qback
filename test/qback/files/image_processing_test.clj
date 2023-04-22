@@ -9,3 +9,8 @@
          (subject/image? (io/file "./resources/favicon.ico"))))
   (is (= true
          (subject/image? (io/file "./resources/test.jpg")))))
+
+(deftest image-type-test
+  (is (= :jpeg
+         (subject/image-type (io/file "./resources/test.jpg"))))
+  (is (nil? (subject/image-type (io/file "./resources/favicon.ico")))))
