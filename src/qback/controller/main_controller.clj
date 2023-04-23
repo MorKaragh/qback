@@ -1,7 +1,7 @@
 (ns qback.controller.main-controller
   (:require [qback.avatar.avatar-handlers :as avatar]
             [qback.blog.blog :as blg]
-            [qback.files.images-handler :refer [image-upl-handler get-image-handler]]
+            [qback.photohost.images-handler :refer [image-upl-handler get-image-handler]]
             [qback.middleware.utilitary-middleware :refer [cors-mw logger]]
             [reitit.ring :as rering]
             [ring.middleware.keyword-params :refer [wrap-keyword-params]]

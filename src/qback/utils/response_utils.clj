@@ -6,7 +6,12 @@
    :headers {"Content-Type" "image/png"}
    :body pic-bytes})
 
-(defn json [body]
-  {:status 200
-   :headers {"Content-Type" "application/json"}
-   :body (json/generate-string body)})
+(defn json
+  ([status body]
+   {:status status
+    :headers {"Content-Type" "application/json"}
+    :body (json/generate-string body)})
+  ([body]
+   (json 200 body)))
+
+

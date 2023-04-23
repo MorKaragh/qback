@@ -1,7 +1,7 @@
-(ns qback.files.image-processing-test
+(ns qback.photohost.image-processing-test
   (:require
    [clojure.test :refer [deftest is]]
-   [qback.files.image-processing :as subject]
+   [qback.photohost.image-processing :as subject]
    [clojure.java.io :as io]))
 
 (deftest image?-test

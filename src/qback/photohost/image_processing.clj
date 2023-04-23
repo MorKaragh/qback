@@ -1,4 +1,4 @@
-(ns qback.files.image-processing
+(ns qback.photohost.image-processing
   (:import (javax.imageio ImageIO))
   (:import (java.lang Integer))
   (:require [clojure.java.io :as io]))

@@ -7,21 +7,22 @@
 (defonce datasource
   (delay (pool/make-datasource (:hikari-settings props))))
 
-(try
-  (jdbc/with-db-connection [conn {:datasource @datasource}]
-    (jdbc/db-do-commands
-     conn
-     (jdbc/create-table-ddl :images
-                            [:id "BIGINT AUTO_INCREMENT PRIMARY KEY"]
-                            [:name "VARCHAR(100)"]
-                            [:path "VARCHAR(200)"]
-                            [:type "VARCHAR(10)"])))
-  (catch Exception e (println "table already exists")))
+(defn create-table 
+  [table & fields]
+  (try
+    (jdbc/with-db-connection [conn {:datasource @datasource}]
+      (jdbc/db-do-commands
+       conn
+       (apply jdbc/create-table-ddl table (concat fields))))
+    (catch Exception e (println "table" (name table) "already exists"))))
 
 (defn insert! [table options]
-  (println options)
   (jdbc/with-db-connection [conn {:datasource @datasource}]
     (jdbc/insert! conn table options)))
+
+(defn select [query]
+  (jdbc/with-db-connection [conn {:datasource @datasource}]
+    (jdbc/query conn query)))
 
 (comment
   (jdbc/with-db-connection [conn {:datasource @datasource}]

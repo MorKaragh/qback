@@ -1,4 +1,4 @@
-(ns qback.files.images-handler
+(ns qback.photohost.images-handler
   (:require [clojure.java.io :as io]
             [qback.files.image-processing :as img]
             [qback.files.images-db :as db]
@@ -14,10 +14,11 @@
 (defn- save-image [dest-file dest-file-path file file-name img-type hash]
   (when (futils/ensure-file-exists dest-file)
     (io/copy file dest-file)
-    (db/save-file-info
+    (db/save-img-metadata
      {:name file-name
       :path dest-file-path
-      :type (name img-type)}))
+      :type (name img-type)
+      :hash hash}))
   (resp/json {:hash hash}))
 
 (def testr "test.jpg")
@@ -34,7 +35,7 @@
         is-image (not (nil? img-type))]
     (if is-image
       (save-image dest-file dest-file-path file file-name img-type hash)
-      (resp/json {:error "bad image"}))))
+      (resp/json 400 {:error "bad image"}))))
 
 
 (defn get-image-handler [{{:keys [hash]} :path-params}] 
