@@ -21,18 +21,3 @@
 (defn get-all-images-metadata
   []
   (db/select ["select * from images"]))
-
-(get-all-images-metadata)
-(get-img-metadata "83b2a5c722d3ca8ee7373268bf80d321")
-
-(defn mulmul
-  [fir & sec]
-  (println fir)
-  (println sec))
-
-(defn mul 
-  [fir & sec]
-  (apply mulmul fir (concat sec)))
-
-(mulmul :a :b :c :d)
-(mul :a :b :c :d)
