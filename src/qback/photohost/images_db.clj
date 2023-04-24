@@ -16,8 +16,11 @@
 
 (defn get-img-metadata 
   [hash]
-  (db/select ["select * from images where hash = ?" hash]))
+  (println "search by hash " hash)
+  (first (db/select ["select * from images where hash = ?" hash])))
 
 (defn get-all-images-metadata
   []
   (db/select ["select * from images"]))
+
+

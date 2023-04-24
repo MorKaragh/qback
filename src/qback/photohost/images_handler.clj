@@ -1,7 +1,7 @@
 (ns qback.photohost.images-handler
   (:require [clojure.java.io :as io]
-            [qback.files.image-processing :as img]
-            [qback.files.images-db :as db]
+            [qback.photohost.image-processing :as img]
+            [qback.photohost.images-db :as db]
             [qback.utils.file-utils :as futils]
             [qback.utils.properties :refer [props]]
             [qback.utils.response-utils :as resp]
@@ -39,6 +39,15 @@
 
 
 (defn get-image-handler [{{:keys [hash]} :path-params}] 
-  {:status 200 :body hash})
+  (println "get-image-handler hash" hash)
+  (let [img-data (db/get-img-metadata hash)
+        path (:path img-data)
+        type (:type img-data)]
+    (println "path")
+    (println path)
+    (println "path")
+    (if (nil? path)
+      (resp/json 404)
+      (resp/img type (img/bytes path)))))
 
 

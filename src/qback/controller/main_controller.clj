@@ -15,7 +15,8 @@
   ["/" {:middleware [wrap-params
                      wrap-keyword-params
                      cors-mw
-                     logger]}
+                    ;;  logger
+                     ]}
    ["favicon.ico" (fn [_] (resp/resource-response "favicon.ico"))]
    ["avatar"
     ["/cat" avatar/cat-avatar-resp]
@@ -23,9 +24,10 @@
     ["/pixel-f" avatar/pixel-avatar-resp-f]]
    ["blog"
     ["/posts" {:get blg/get-handler}]]
-   ["images" {:get get-image-handler 
-              :post image-upl-handler
-              :middleware [wrap-multipart-params]}]])
+   ["images"
+    ["" {:post image-upl-handler
+         :middleware [wrap-multipart-params]}]
+    ["/:hash" {:get get-image-handler}]]])
 
 (def controller
   (rering/ring-handler

@@ -1,5 +1,6 @@
 (ns qback.utils.response-utils 
-  (:require [cheshire.core :as json]))
+  (:require [cheshire.core :as json]
+            [qback.photohost.image-processing :as img]))
 
 (defn png [pic-bytes]
   {:status 200
@@ -14,4 +15,8 @@
   ([body]
    (json 200 body)))
 
-
+(defn img
+  [type bytes]
+  {:status 200
+   :headers {"Content-Type" (str "image/" type)}
+   :body bytes})

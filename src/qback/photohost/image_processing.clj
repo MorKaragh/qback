@@ -1,6 +1,6 @@
 (ns qback.photohost.image-processing
   (:import (javax.imageio ImageIO))
-  (:import (java.lang Integer))
+  (:import (java.nio.file Files))
   (:require [clojure.java.io :as io]))
 
 (def ^{:private true}
@@ -27,6 +27,9 @@
 (defn image-type [file]
   (with-open [stream (io/input-stream file)]
     (get-file-type (map to-hex (stream-bytes stream)))))
+
+(defn bytes [path]
+  (Files/readAllBytes (.toPath (io/file path))))
 
 (defn image? [file]
   (with-open [stream (io/input-stream file)]
