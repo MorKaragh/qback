@@ -3,11 +3,11 @@
   (:import (java.nio.file Files))
   (:require [clojure.java.io :as io]))
 
-(def ^{:private true}
-  signatures {:jpeg ["ff" "d8" "ff" "e0"]
-              :png ["89" "50" "4e" "47"]
-              :gif ["47" "49" "46" "38"]
-              :tiff ["49" "49" "2a" "00"]})
+(def ^{:private true} signatures
+  {:jpeg ["ff" "d8" "ff" "e0"]
+   :png ["89" "50" "4e" "47"]
+   :gif ["47" "49" "46" "38"]
+   :tiff ["49" "49" "2a" "00"]})
 
 (defn- stream-bytes [is]
   (let [baos (java.io.ByteArrayOutputStream.)]
