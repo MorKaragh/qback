@@ -9,8 +9,6 @@
             [ring.middleware.multipart-params :refer [wrap-multipart-params]]
             [ring.util.response :as resp]))
 
-(defn- opt-handler [arg1])
-
 (def ^:private routes
   ["/" {:middleware [wrap-params
                      wrap-keyword-params
