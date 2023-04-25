@@ -39,13 +39,9 @@
 
 
 (defn get-image-handler [{{:keys [hash]} :path-params}] 
-  (println "get-image-handler hash" hash)
   (let [img-data (db/get-img-metadata hash)
         path (:path img-data)
         type (:type img-data)]
-    (println "path")
-    (println path)
-    (println "path")
     (if (nil? path)
       (resp/json 404)
       (resp/img type (img/bytes path)))))
