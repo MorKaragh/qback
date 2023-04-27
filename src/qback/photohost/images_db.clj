@@ -23,4 +23,6 @@
   []
   (db/select ["select * from images"]))
 
+(map :hash (get-all-images-metadata))
+
 
