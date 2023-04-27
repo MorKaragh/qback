@@ -1,12 +1,14 @@
 (ns qback.controller.main-controller
   (:require [qback.avatar.avatar-handlers :as avatar]
             [qback.blog.blog :as blg]
-            [qback.photohost.images-handler :refer [image-upl-handler get-image-handler]]
             [qback.middleware.utilitary-middleware :refer [cors-mw logger]]
+            [qback.photohost.images-handler :refer [get-image-handler
+                                                    get-image-hashes 
+                                                    image-upl-handler]]
             [reitit.ring :as rering]
             [ring.middleware.keyword-params :refer [wrap-keyword-params]]
-            [ring.middleware.params :refer [wrap-params]]
             [ring.middleware.multipart-params :refer [wrap-multipart-params]]
+            [ring.middleware.params :refer [wrap-params]]
             [ring.util.response :as resp]))
 
 (def ^:private routes
@@ -23,7 +25,8 @@
    ["blog"
     ["/posts" {:get blg/get-handler}]]
    ["images"
-    ["" {:post image-upl-handler
+    ["" {:get get-image-hashes
+         :post image-upl-handler
          :middleware [wrap-multipart-params]}]
     ["/:hash" {:get get-image-handler}]]])
 

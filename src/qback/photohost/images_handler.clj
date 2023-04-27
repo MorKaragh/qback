@@ -43,7 +43,10 @@
         path (:path img-data)
         type (:type img-data)]
     (if (nil? path)
-      (resp/json 404)
+      (resp/json 404 {:error "no image"})
       (resp/img type (img/bytes path)))))
+
+(defn get-image-hashes [_]
+  (resp/json (map :hash (db/get-all-images-metadata))))
 
 
